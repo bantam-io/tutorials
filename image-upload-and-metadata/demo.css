@@ -1,10 +1,8 @@
 .FullScreenLoading {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
+  max-width: 1000px;
   background: rgba(255, 255, 255, 0.5);
+  margin: 0 auto;
+  padding-bottom: 25vh;
 }
 
 .FullScreenLoading i.fa-spinner {
@@ -16,17 +14,39 @@
   top: calc(50% - 25px);
 }
 
+.Title {
+  font-size: 1em;
+  width: 30%;
+  display: inline-block;
+  text-align: left;
+}
+.Subtitle {
+  font-size: 1.2em;
+}
+
 .ImageWrapper {
-  height: 0px;
   position: relative;
   max-width: 100%;
 }
 
 .ImageWrapper img {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 100%;
-  bottom: 0;
   object-fit: cover;
+  /* border: 5px solid red; */
+}
+
+.DominateColor {
+  display: inline-block;
+  border: 1px solid black;
+  width: 2em;
+  height: 2em;
+  vertical-align: middle;
+}
+
+code {
+  background-color: black;
+  color: white;
+}
+
+.left {
+  padding: 1em;
 }
