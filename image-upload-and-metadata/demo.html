@@ -1,16 +1,95 @@
 <script src="https://unpkg.com/@bantam-io/js@latest/index.js"></script>
-
+<script
+  src="http://code.jquery.com/jquery-2.1.1.min.js"
+  integrity="sha256-h0cGsrExGgcZtSZ/fRz4AwV+Nn6Urh/3v3jFRQ0w9dQ="
+  crossorigin="anonymous"
+></script>
+<script src="demo.js"></script>
+<link rel="stylesheet" type="text/css" href="demo.css" />
 <link
   rel="stylesheet"
   href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css"
 />
+<div class="FullScreenLoading">
+  <!-- CHALLENGES -->
+  <div style="margin-top: 10vh; line-height: 1.6em">
+    <h1 style="text-align: center;">
+      Image Upload and Modification - Bantam Style
+    </h1>
+    <div
+      style="margin-left: 20%;
+    font-size: 1.2em; margin-bottom:1em;"
+    >
+      <ul>
+        1. Upload an image
+        <br />2. Get the metadata
+        <br />3. Create modificaitons
+        <div style='margin-left: 1em;'>
+            - 500px</br >
+            - Thumbmail</br >
+            - Grayscale</br >
+  
+        </div>
+    </div>
+  </div>
+  <!-- UPLOAD -->
+  <div style='padding: 5px;font-size: 1.2em;'>
+    <span>Select an local image:</span>
+    <button onclick="uploadAndShowFile('image/jpeg, image/jpg, image/png')">
+      Select Image
+    </button>
+  </div>
 
-<button onclick="uploadAndShowFile('image/jpeg, image/jpg, image/png')">
-  Select Image
-</button>
-<br />
-<br />
+  <!-- RESULTS -->
+  <div id='results' hidden>
+  <!-- FULL IMAGE -->
+  <div style="border-top:black solid 1px;">
+    <div class="left">
+      <h2>Full Size Image:</h2>
+      <!-- <div class="ImageWrapper" style="text-align: center;margin-top: 1em;"> -->
+        <img id="full" />
+      <!-- </div> -->
+    </div>
+  </div>
+<!-- About Image -->
+  <div style="border-top:black solid 1px;clear: both;">
+      <div class="left">
+        Dominate Color: <span id='colorCode'></span>
+        <div class='dominantColor' style="width:50px;height:50px"></div>
+        <div id="width"></div>
+        <div id="height"></div>        
+      </div>
+    </div>
 
-<div class="ImageWrapper">
-  <img />
-</div>
+<!-- FULL IMAGE WITH BORDER -->
+    <div style="border-top:black solid 1px;clear: both;">
+        <div class="left">
+                <h2>Full image with dominate color applied to border:</h2>
+                <!-- <div class="ImageWrapper" style="text-align: center;margin-top: 1em;"></div> -->
+                  <img id="border" />
+              <!-- </div> -->
+        </div>
+      </div>
+      <!-- 300PX IMAGE -->
+      <div style="border-top:black solid 1px;clear: both;">
+          <div class="left">
+                  <h2>300px</h2>
+                      <img id="medium" />
+          </div>
+        </div>
+        <!-- THUMBNAIL -->
+        <div style="border-top:black solid 1px;clear: both;">
+            <div class="left">
+                    <h2>Thumbnail - 100px</h2>
+                        <img id="thumbnail" />
+            </div>
+          </div>
+        <!-- GREYSCALE -->
+        <div style="border-top:black solid 1px;clear: both; margin-bottom: 10vh;">
+            <div class="left">
+                    <h2>Greyscale</h2>
+                        <img id="greyscale" />
+            </div>
+          </div>
+        </div>
+  </div>
