@@ -1,5 +1,7 @@
 window.addEventListener('load', function() {
-  bantam.configure({});
+  bantam.configure({
+    // apiKey: 'APIKEY',
+  });
 
   window.uploadAndShowFile = function uploadAndShowFile(type) {
     selectFile(type).then(
