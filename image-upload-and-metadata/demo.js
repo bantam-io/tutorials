@@ -8,6 +8,7 @@ window.addEventListener('load', function() {
       res => {
         console.log('result url', res.url);
         console.log('result metadata', res.metadata);
+        console.log('selected file type', type);
 
         const resizeToWidth = 500;
 
