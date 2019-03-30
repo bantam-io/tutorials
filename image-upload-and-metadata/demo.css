@@ -2,7 +2,11 @@
   max-width: 1000px;
   background: rgba(255, 255, 255, 0.5);
   margin: 0 auto;
-  padding-bottom: 25vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
 }
 
 .FullScreenLoading i.fa-spinner {
