@@ -50,3 +50,7 @@ code {
 .left {
   padding: 1em;
 }
+
+#results img {
+  max-width: 100%;
+}
