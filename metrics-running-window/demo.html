@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <script src="https://unpkg.com/@bantam-io/js@latest/index.js"></script>
+    <script
+      src="http://code.jquery.com/jquery-2.1.1.min.js"
+      integrity="sha256-h0cGsrExGgcZtSZ/fRz4AwV+Nn6Urh/3v3jFRQ0w9dQ="
+      crossorigin="anonymous"
+    ></script>
+    <script src="demo.js"></script>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div style="padding: 5px;font-size: 1.2em;">
+      <span>Select an image:</span>
+      <button onclick="uploadAndShowFile('image/jpeg, image/jpg, image/png')">
+        Select Image
+      </button>
+      <br />
+    </div>
+    <div id="results">
+      <img id="full" />
+    </div>
+
+    <div id="Times" hidden="true">
+      <div>
+        Time in milliseconds:
+      </div>
+      <div>User Start Time: <span id="userStartTime"></span></div>
+      <div>User End Time: <span id="userEndTime"></span></div>
+      <div>Total User Time: <span id="totalUserTime"></span></div>
+      <hr />
+      <div>File Upload Start Time: <span id="fileUploadStartTime"></span></div>
+      <div>File Upload End Time: <span id="fileUploadEndTime"></span></div>
+      <div>Total File Upload Time: <span id="fileUploadTime"></span></div>
+    </div>
+
+    <hr />
+    <div id="metrics" hidden="true">
+      <div>
+        <button onclick="getMetrics()">Retrive metrics:</button>
+        <br /><br />
+      </div>
+      <div>
+        <b>User Results</b>
+      </div>
+      <div id="metric-results-user"></div>
+      <hr />
+      <div>
+        <b>Upload Results</b>
+      </div>
+      <div id="metric-results-upload"></div>
+    </div>
+  </body>
+</html>

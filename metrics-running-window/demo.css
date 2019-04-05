@@ -1,0 +1,63 @@
+.FullScreenLoading {
+  max-width: 1000px;
+  background: rgba(255, 255, 255, 0.5);
+  margin: 0 auto;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.FullScreenLoading i.fa-spinner {
+  font-size: 50px;
+  width: 50px;
+  height: 50px;
+  position: fixed;
+  left: calc(50% - 25px);
+  top: calc(50% - 25px);
+}
+
+.Title {
+  font-size: 1em;
+  width: 30%;
+  display: inline-block;
+  text-align: left;
+}
+.Subtitle {
+  font-size: 1.2em;
+}
+
+.ImageWrapper {
+  position: relative;
+  max-width: 100%;
+}
+
+.ImageWrapper img {
+  object-fit: cover;
+  /* border: 5px solid red; */
+}
+
+.DominateColor {
+  display: inline-block;
+  border: 1px solid black;
+  width: 2em;
+  height: 2em;
+  vertical-align: middle;
+}
+
+code {
+  background-color: black;
+  color: white;
+}
+
+.left {
+  padding: 1em;
+}
+
+#results img {
+  max-width: 100%;
+}
+
+#log {
+}
