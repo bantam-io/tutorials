@@ -1,6 +1,6 @@
 window.addEventListener('load', function() {
   bantam.configure({
-    apiKey: '9033eb6d-7aca-47c7-97c8-3e9500c65289',
+    apiKey: 'apikey',
   });
 
   var userUploadStartTime = '',
