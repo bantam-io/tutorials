@@ -1,6 +1,6 @@
 window.addEventListener('load', function() {
   bantam.configure({
-    apiKey: 'apikey',
+    apiKey: '9033eb6d-7aca-47c7-97c8-3e9500c65289',
   });
 
   var userUploadStartTime = '',
@@ -16,7 +16,7 @@ window.addEventListener('load', function() {
         console.log('result url', res.url);
         console.log('result metadata', res.metadata);
 
-        document.querySelector('#border').style['border'] = `10px solid #888`;
+        // document.querySelector('#border').style['border'] = `10px solid #888`;
         document.querySelector('#full').hidden = false;
         document.querySelector('#results').hidden = false;
       },
@@ -82,11 +82,8 @@ window.addEventListener('load', function() {
         },
       };
     }
-    console.log('selected file: ', type);
     return new Promise(function(resolve, reject) {
-      console.log('select Image');
       selectLocalImage();
-
       function selectLocalImage() {
         const input = document.createElement('input');
         input.setAttribute('type', 'file');
@@ -97,7 +94,6 @@ window.addEventListener('load', function() {
         input.addEventListener('change', function() {
           uploadFile(input);
         });
-
         input.click();
       }
 
@@ -125,21 +121,20 @@ window.addEventListener('load', function() {
             document.querySelector(
               '#userEndTime'
             ).innerHTML = userUploadEndTime;
-            const userDuration = userUploadEndTime - userUploadStartTime;
-            document.querySelector('#totalUserTime').innerHTML = userDuration;
-            // file time
+            document.querySelector('#totalUserTime').innerHTML =
+              userUploadEndTime - userUploadStartTime;
             document.querySelector(
               '#fileUploadStartTime'
             ).innerHTML = fileUploadStartTime;
             document.querySelector(
               '#fileUploadEndTime'
             ).innerHTML = fileUploadEndTime;
-            const fileUploadTime = fileUploadEndTime - fileUploadStartTime;
-            document.querySelector(
-              '#fileUploadTime'
-            ).innerHTML = fileUploadTime;
+            document.querySelector('#fileUploadTime').innerHTML =
+              fileUploadEndTime - fileUploadStartTime;
             document.querySelector('#metrics').hidden = false;
 
+            const userDuration = userUploadEndTime - userUploadStartTime;
+            const fileUploadTime = fileUploadEndTime - fileUploadStartTime;
             pushRunningWindow(
               'upload-image',
               'user',
