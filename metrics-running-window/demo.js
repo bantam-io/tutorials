@@ -114,6 +114,7 @@ window.addEventListener('load', function() {
               fileUploadEndTime = new Date().getTime();
               userUploadEndTime = new Date().getTime();
               document.querySelector('#full').src = res.url;
+              loader.dismiss();
             },
             e => {
               loader.dismiss();
